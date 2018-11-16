@@ -60,6 +60,12 @@ export const MainRoutes = [
         children: [],
       },
       {
+        id: 'ProfileV4',
+        title: 'User Profile V4',
+        screen: Screens.ProfileV4,
+        children: [],
+      },
+      {
         id: 'ProfileSettings',
         title: 'Profile Settings',
         screen: Screens.ProfileSettings,
@@ -260,9 +266,9 @@ export const MainRoutes = [
 
 const menuRoutes = _.cloneDeep(MainRoutes);
 menuRoutes.unshift({
-  id: 'GridV2',
+  id: 'ProfileV4',
   title: 'Start',
-  screen: Screens.GridV2,
+  screen: Screens.ProfileV4,
   children: [],
 });
 

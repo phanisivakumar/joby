@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import populate from './dataGenerator';
+import profiles from './raw/profiles';
 import users from './raw/users';
 import articles from './raw/articles';
 import notifications from './raw/notifications';
@@ -7,6 +8,14 @@ import conversations from './raw/conversations';
 import cards from './raw/cards';
 
 class DataProvider {
+  getProfile(id = 1) {
+    return _.find(profiles, x => x.id === id);
+  }
+
+  getProfiles() {
+    return profiles;
+  }
+
   getUser(id = 1) {
     return _.find(users, x => x.id === id);
   }
